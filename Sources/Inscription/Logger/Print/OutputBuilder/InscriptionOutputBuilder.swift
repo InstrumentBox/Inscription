@@ -28,7 +28,7 @@ import Foundation
 ///
 /// It logs ``Message`` as following string:
 ///
-/// ```2022-04-11 17:23:56.838 [MyFile.swift:42] — 📓 VERBOSE — hello world```
+/// `2022-04-11 17:23:56.838 [MyFile.swift:42] — 📓 VERBOSE — hello world`
 public final class InscriptionOutputBuilder: OutputBuilder {
    private let dateFormatter: DateFormatter
 
