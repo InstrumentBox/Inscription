@@ -34,11 +34,11 @@ public struct LevelConfiguration: Hashable {
    // MARK: - Predefined
 
    public static let verbose = LevelConfiguration(intValue: 0)
-   public static let debug = LevelConfiguration(intValue: 1)
-   public static let info = LevelConfiguration(intValue: 2)
-   public static let warning = LevelConfiguration(intValue: 3)
-   public static let error = LevelConfiguration(intValue: 4)
-   public static let fault = LevelConfiguration(intValue: 5)
+   public static let debug = LevelConfiguration(intValue: 10)
+   public static let info = LevelConfiguration(intValue: 20)
+   public static let warning = LevelConfiguration(intValue: 30)
+   public static let error = LevelConfiguration(intValue: 40)
+   public static let fault = LevelConfiguration(intValue: 50)
    public static let disabled = LevelConfiguration(intValue: .max)
 
    // MARK: - Stuff

@@ -38,11 +38,11 @@ public struct Level: Hashable {
    // MARK: - Predefined
 
    public static let verbose = Level(intValue: 0, name: "VERBOSE", coloredEmoji: "📓")
-   public static let debug = Level(intValue: 1, name: "DEBUG", coloredEmoji: "📘")
-   public static let info = Level(intValue: 2, name: "INFO", coloredEmoji: "📗")
-   public static let warning = Level(intValue: 3, name: "WARNING", coloredEmoji: "📒")
-   public static let error = Level(intValue: 4, name: "ERROR", coloredEmoji: "📙")
-   public static let fault = Level(intValue: 5, name: "FAULT", coloredEmoji: "📕")
+   public static let debug = Level(intValue: 10, name: "DEBUG", coloredEmoji: "📘")
+   public static let info = Level(intValue: 20, name: "INFO", coloredEmoji: "📗")
+   public static let warning = Level(intValue: 30, name: "WARNING", coloredEmoji: "📒")
+   public static let error = Level(intValue: 40, name: "ERROR", coloredEmoji: "📙")
+   public static let fault = Level(intValue: 50, name: "FAULT", coloredEmoji: "📕")
 
    // MARK: - Equatable
 
