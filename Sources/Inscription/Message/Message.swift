@@ -22,6 +22,10 @@
 //  THE SOFTWARE.
 //
 
+/// A protocol that describes a message that can be logged using ``Logger``.
 public protocol Message {
+   /// A place where string representation of message must be constructed.
+   ///
+   /// - Returns: A string to be a part of logging output.
    func toString() -> String
 }

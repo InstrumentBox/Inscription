@@ -24,12 +24,19 @@
 
 import Foundation
 
+/// A logger that logs message to Xcode console by using `print` function.
 public final class PrintLogger: Logger {
    private let levelConfiguration: LevelConfiguration
    private let outputBuilder: OutputBuilder
 
    // MARK: - Init
 
+   /// Creates and returns a new instance of ``PrintLogger`` with a given parameters.
+   ///
+   /// - Parameters:
+   ///   - levelConfiguration: A configuration of logging levels. Defaults to `.verbose`.
+   ///   - outputBuilder: An output builder to make final formatter message from a given
+   ///                    ``Message``. Defaults to ``InscriptionOutputBuilder``.
    public init(
       levelConfiguration: LevelConfiguration = .verbose,
       outputBuilder: OutputBuilder = InscriptionOutputBuilder()

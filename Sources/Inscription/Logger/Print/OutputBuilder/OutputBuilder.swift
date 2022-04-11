@@ -24,7 +24,17 @@
 
 import Foundation
 
+/// A protocol, an object that creates resulting log output, must conform to.
 public protocol OutputBuilder {
+   /// Builds an output from given parameters.
+   ///
+   /// - Parameters:
+   ///   - message: A message with a logging payload.
+   ///   - level: A level at which message should be logged
+   ///   - date: A date when message is logged.
+   ///   - file: A file in which logging is occurred.
+   ///   - line: A line in file at which logging occurred.
+   /// - Returns: A resulting string to be logged.
    func buildOutput(
       from message: Message,
       of level: Level,

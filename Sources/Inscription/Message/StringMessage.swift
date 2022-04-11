@@ -27,6 +27,10 @@ public struct StringMessage: Message {
 
    // MARK: - Init
 
+   /// Creates and returns an instance of string message with a given string.
+   ///
+   /// - Parameters:
+   ///   - string: A string value of message.
    public init(_ string: String) {
       self.string = string
    }

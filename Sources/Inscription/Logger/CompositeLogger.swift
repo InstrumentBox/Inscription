@@ -22,11 +22,17 @@
 //  THE SOFTWARE.
 //
 
+/// A logger that has an array of other ``Logger`` objects and passes them a given ``Message``
+/// with a given ``Level``.
 public final class CompositeLogger: Logger {
    private let loggers: [Logger]
 
    // MARK: - Init
 
+   /// Creates and returns a new instance of ``CompositeLogger`` with given parameters.
+   ///
+   /// - Parameters:
+   ///   - loggers: An array of logger to pass them a logged ``Message``.
    public init(loggers: [Logger]) {
       self.loggers = loggers
    }

@@ -22,27 +22,58 @@
 //  THE SOFTWARE.
 //
 
+/// A configuration that allows to enable or disable needed log ``Level``.
 public struct LevelConfiguration: Hashable {
    let intValue: Int
 
    // MARK: - Init
 
+   /// Creates and returns a new instance of level configuration with given parameters.
+   ///
+   /// - Parameters:
+   ///   - intValue: A numeric value of level configuration to check if level allowed.
    public init(intValue: Int) {
       self.intValue = intValue
    }
 
    // MARK: - Predefined
 
+   /// A configuration that allows to log messages of `VERBOSE` level and higher. The `intValue`
+   /// equals to 0.
    public static let verbose = LevelConfiguration(intValue: 0)
+
+   /// A configuration that allows to log messages of `DEBUG` level and higher. The `intValue`
+   /// equals to 10.
    public static let debug = LevelConfiguration(intValue: 10)
+
+   /// A configuration that allows to log messages of `INFO` level and higher. The `intValue`
+   /// equals to 20.
    public static let info = LevelConfiguration(intValue: 20)
+
+   /// A configuration that allows to log messages of `WARNING` level and higher. The `intValue`
+   /// equals to 30.
    public static let warning = LevelConfiguration(intValue: 30)
+
+   /// A configuration that allows to log messages of `ERROR` level and higher. The `intValue`
+   /// equals to 40.
    public static let error = LevelConfiguration(intValue: 40)
+
+   /// A configuration that allows to log messages of `FAULT` level and higher. The `intValue`
+   /// equals to 50.
    public static let fault = LevelConfiguration(intValue: 50)
+
+   /// A configuration that disables all log messages. The `intValue` equals to `.max`.
    public static let disabled = LevelConfiguration(intValue: .max)
 
    // MARK: - Stuff
 
+   /// Checks if message of a given level can be logged according to this configuration. It makes
+   /// decision depending on `intValue` of ``Level`` and ``LevelConfiguration``. Logging is allowed
+   /// if `intValue` of ``Level`` greater than or equal to `intValue` of ``LevelConfiguration``.
+   ///
+   /// - Parameters:
+   ///   - level: A ``Level`` to be check if it can be logged.
+   /// - Returns: `true` if message of given level can be logged. Otherwise `false`.
    public func allowsLog(of level: Level) -> Bool {
       level.intValue >= intValue
    }

@@ -22,6 +22,7 @@
 //  THE SOFTWARE.
 //
 
+/// A level of logging to differentiate messages.
 public struct Level: Hashable {
    let intValue: Int
    let name: String
@@ -29,6 +30,12 @@ public struct Level: Hashable {
 
    // MARK: - Init
 
+   /// Creates and returns a new instance of level with given parameters.
+   ///
+   /// - Parameters:
+   ///   - intValue: A numeric value of level to be used with ``LevelConfiguration``.
+   ///   - name: A name of level to be a part of log message.
+   ///   - coloredEmoji: An emoji symbol to visualize level in message.
    public init(intValue: Int, name: String, coloredEmoji: String?) {
       self.intValue = intValue
       self.name = name
@@ -37,24 +44,46 @@ public struct Level: Hashable {
 
    // MARK: - Predefined
 
+   /// A `VERBOSE` logging level. The lowest level with `intValue` equals to 0.
    public static let verbose = Level(intValue: 0, name: "VERBOSE", coloredEmoji: "📓")
+
+   /// A `DEBUG` logging level. The `intValue` of this level equals to 10.
    public static let debug = Level(intValue: 10, name: "DEBUG", coloredEmoji: "📘")
+
+   /// An `INFO` logging level. The `intValue` of this level equals to 20.
    public static let info = Level(intValue: 20, name: "INFO", coloredEmoji: "📗")
+
+   /// A `WARNING` logging level. The `intValue` of this level equals to 30.
    public static let warning = Level(intValue: 30, name: "WARNING", coloredEmoji: "📒")
+
+   /// An `ERROR` logging level. The `intValue` of this level equals to 40.
    public static let error = Level(intValue: 40, name: "ERROR", coloredEmoji: "📙")
+
+   /// A `FAULT` logging level. The `intValue` of this level equals to 50. The highest logging
+   /// level.
    public static let fault = Level(intValue: 50, name: "FAULT", coloredEmoji: "📕")
 
    // MARK: - Equatable
 
+   /// Checks equality of two instances of level. It uses `intValue` and `name` fields to do this
+   /// check.
+   /// 
+   /// - Parameters:
+   ///   - lhs: The first instance to check equality.
+   ///   - rhs: The second instance to check equality.
+   /// - Returns: `true` if two instances are equal. Otherwise `false`.
    public static func ==(lhs: Level, rhs: Level) -> Bool {
       lhs.intValue == rhs.intValue && lhs.name == rhs.name
    }
 
    // MARK: - Hashable
 
+   /// Combines values of `intValue` and `name` field and return a hash number.
+   ///
+   /// - Parameters:
+   ///   - hasher: A `Hasher` object which is used to calculate hash.
    public func hash(into hasher: inout Hasher) {
       hasher.combine(intValue)
       hasher.combine(name)
    }
 }
-

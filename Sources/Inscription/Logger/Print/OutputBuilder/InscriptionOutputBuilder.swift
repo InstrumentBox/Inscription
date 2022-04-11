@@ -24,6 +24,11 @@
 
 import Foundation
 
+/// A default implementation of ``OutputBuilder`` provided by this library.
+///
+/// It logs ``Message`` as following string:
+///
+/// ```2022-04-11 17:23:56.838 [MyFile.swift:42] — 📓 VERBOSE — hello world```
 public final class InscriptionOutputBuilder: OutputBuilder {
    private let dateFormatter: DateFormatter
 
@@ -33,6 +38,7 @@ public final class InscriptionOutputBuilder: OutputBuilder {
       self.dateFormatter = dateFormatter
    }
 
+   /// Creates and returns a new instance of ``InscriptionOutputBuilder``.
    public convenience init() {
       let dateFormatter = DateFormatter()
       dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSSZZZ"
