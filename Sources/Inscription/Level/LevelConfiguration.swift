@@ -23,7 +23,7 @@
 //
 
 public struct LevelConfiguration: Hashable {
-   public let intValue: Int
+   let intValue: Int
 
    // MARK: - Init
 

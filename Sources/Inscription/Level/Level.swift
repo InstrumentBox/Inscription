@@ -23,9 +23,9 @@
 //
 
 public struct Level: Hashable {
-   public let intValue: Int
-   public let name: String
-   public let coloredEmoji: String?
+   let intValue: Int
+   let name: String
+   let coloredEmoji: String?
 
    // MARK: - Init
 
