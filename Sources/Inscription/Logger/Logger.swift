@@ -29,10 +29,6 @@ public protocol Logger {
 }
 
 extension Logger {
-   public func log(_ level: Level, _ message: Message, file: String = #file, line: UInt = #line) {
-      log(level, message, in: file, at: line)
-   }
-
    public func verbose(_ message: Message, file: String = #file, line: UInt = #line) {
       log(.verbose, message, in: file, at: line)
    }
