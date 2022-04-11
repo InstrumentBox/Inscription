@@ -45,23 +45,23 @@ public struct Level: Hashable {
    // MARK: - Predefined
 
    /// A `VERBOSE` logging level. The lowest level with `intValue` equals to 0.
-   public static let verbose = Level(intValue: 0, name: "VERBOSE", coloredEmoji: "📓")
+   public static let verbose = Level(intValue: 0, name: "VERBOSE", coloredEmoji: "⬜️")
 
    /// A `DEBUG` logging level. The `intValue` of this level equals to 10.
-   public static let debug = Level(intValue: 10, name: "DEBUG", coloredEmoji: "📘")
+   public static let debug = Level(intValue: 10, name: "DEBUG", coloredEmoji: "🟦")
 
    /// An `INFO` logging level. The `intValue` of this level equals to 20.
-   public static let info = Level(intValue: 20, name: "INFO", coloredEmoji: "📗")
+   public static let info = Level(intValue: 20, name: "INFO", coloredEmoji: "🟩")
 
    /// A `WARNING` logging level. The `intValue` of this level equals to 30.
-   public static let warning = Level(intValue: 30, name: "WARNING", coloredEmoji: "📒")
+   public static let warning = Level(intValue: 30, name: "WARNING", coloredEmoji: "🟨")
 
    /// An `ERROR` logging level. The `intValue` of this level equals to 40.
-   public static let error = Level(intValue: 40, name: "ERROR", coloredEmoji: "📙")
+   public static let error = Level(intValue: 40, name: "ERROR", coloredEmoji: "🟧")
 
    /// A `FAULT` logging level. The `intValue` of this level equals to 50. The highest logging
    /// level.
-   public static let fault = Level(intValue: 50, name: "FAULT", coloredEmoji: "📕")
+   public static let fault = Level(intValue: 50, name: "FAULT", coloredEmoji: "🟥")
 
    // MARK: - Equatable
 
